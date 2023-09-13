@@ -7,6 +7,7 @@ burger.addEventListener('click', function(){
 	menu.classList.toggle('active');
 });
 
+
   // Modal
   const modalTrigger = document.querySelectorAll('[data-modal]'),
   modal = document.querySelector('.modal'),
@@ -58,12 +59,51 @@ for (let smoothLink of smoothLinks) {
 
 
 
-
-togle_btn = document.querySelector('.togle'),
+/*
+togle_btn = document.querySelectorAll('.togle'),
 togle_block = document.querySelector('.togle_block');
+
+
 function closeTogle() {
   togle_block.classList.toggle('hide');
 }
-togle_btn.addEventListener('click', closeTogle);
+
+togle_btn.forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    togle_block.classList.toggle('hide');
+	  // Либо вариант с toggle - но тогда назначить класс в верстке
+	 //document.body.style.overflow = 'hidden';
+
+  });
+});
+*/
 
 
+
+
+
+let info=document.querySelectorAll(".togle");
+let text_info=document.querySelector(".rate__list");
+
+
+info.forEach(function(btn) {
+  btn.addEventListener('click', function() {
+      //text_info.classList.toggle('more');
+    text_info.classList.toggle('more');
+  });
+});
+
+
+
+
+tabsParent.addEventListener("click", function (event) {
+  const target = event.target;
+  if (target && target.classList.contains("tabheader__item")) {
+    tabs.forEach((item, i) => {
+      if (target == item) {
+        hideTabContent();
+        showTabContent(i);
+      }
+    });
+  }
+});

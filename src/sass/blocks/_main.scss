@@ -405,15 +405,6 @@ swiper-slide {
   width: 80%;
 }
 
-
-.case {
-  // .case__slider
-
-  &__slider {
-   
-  }
-}
-
 .slider {
   // .slider__item1
   &__item1 {
@@ -577,6 +568,8 @@ overflow: hidden;
   // .rate__item
 
   &__item {
+   
+
     @include adaptiv-value("padding-top", 44, 15, 0);
     @include adaptiv-value("padding-bottom", 54, 27, 0);
     @include adaptiv-value("padding-left", 10, 10, 0);
@@ -610,9 +603,12 @@ overflow: hidden;
   // .rate__list
 
   &__list {
+    max-height: 270px;
+    overflow: hidden; 
     display: flex;
     flex-direction: column;
     @include adaptiv-value("gap", 43, 20, 0);
+    
   }
 
   // .rate__list-gray
@@ -816,6 +812,7 @@ overflow: hidden;
   margin: 40px auto;
 }
 .modal__content {
+  
   position: relative;
   @include adaptiv-value("padding", 30, 20, 0);
   background-color: #fff;
@@ -825,6 +822,20 @@ overflow: hidden;
   overflow-y: auto;
   margin-left: 5px;
   margin-right: 5px;
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+
 }
 .modal__close {
   position: absolute;
@@ -917,17 +928,24 @@ font-size: 20px;
 text-decoration: underline;
 }
 .togle_block {
-  height: 0;
+ /* height: 0;
   overflow: hidden;
   opacity: 0;
   transition: height 1s;
   -webkit-transition: height 1s;
   -moz-transition: height 1s;
   -ms-transition: height 1s;
-  -o-transition: height 1s;
+  -o-transition: height 1s;*/
 }
 .hide {           
-  opacity: 1;
-  height: 200px;
-  // box-sizing: border-box;
+  //opacity: 1;
+  //@at-root adaptiv-value("height", 370, 120, 0);
+  display:none;
 }
+
+
+.more {
+  max-height: none;  
+  overflow: visible;
+  
+}  

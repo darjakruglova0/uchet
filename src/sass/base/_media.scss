@@ -58,7 +58,7 @@
   }
   &-accounting{
     img{
-      @include adaptiv-value("width", 600, 100, 0);
+      @include adaptiv-value("width", 400, 100, 0);
     }
   }
 
@@ -104,6 +104,11 @@
       @include adaptiv-value("gap", 25, 20, 0);
     }
   }
+ /* .hide {           
+    opacity: 1;
+    @include adaptiv-value("height", 250, 150, 0);
+    
+  }*/
   .slider{
     table{
       .index-big{
@@ -112,8 +117,9 @@
     }
     &__item1{
       @include adaptiv-value("padding", 20, 10, 0);
-      row-gap: 1rem;
-      @include adaptiv-value("column-gap", 20, 10, 0);
+      row-gap: 0.5rem;
+      @include adaptiv-value("column-gap", 20, 0, 0);
+      grid-template-rows: [row1-s] minmax(100px, 113px) [row2-s] minmax(150px, auto) [row3-s] minmax(150px, 1fr);
     }
     &__title{
       @include adaptiv-value("font-size", 30, 15, 0);

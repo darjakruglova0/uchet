@@ -1160,6 +1160,8 @@ swiper-slide {
   color: #FFF;
 }
 .rate__list {
+  max-height: 270px;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1390,8 +1392,32 @@ swiper-slide {
   overflow-y: auto;
   margin-left: 5px;
   margin-right: 5px;
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
 }
 
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
 .modal__close {
   position: absolute;
   top: 0px;
@@ -1498,19 +1524,23 @@ swiper-slide {
 }
 
 .togle_block {
-  height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: height 1s;
-  -webkit-transition: height 1s;
-  -moz-transition: height 1s;
-  -ms-transition: height 1s;
-  -o-transition: height 1s;
+  /* height: 0;
+   overflow: hidden;
+   opacity: 0;
+   transition: height 1s;
+   -webkit-transition: height 1s;
+   -moz-transition: height 1s;
+   -ms-transition: height 1s;
+   -o-transition: height 1s;*/
 }
 
 .hide {
-  opacity: 1;
-  height: 200px;
+  display: none;
+}
+
+.more {
+  max-height: none;
+  overflow: visible;
 }
 
 @media screen and (min-width: 1920px) {
@@ -1558,7 +1588,7 @@ swiper-slide {
     width: calc(100px + 500 * ((100vw - 320px) / 1600));
   }
   .solution__item-accounting img {
-    width: calc(100px + 500 * ((100vw - 320px) / 1600));
+    width: calc(100px + 300 * ((100vw - 320px) / 1600));
   }
   .solution__item-business img {
     width: calc(100px + 500 * ((100vw - 320px) / 1600));
@@ -1594,15 +1624,21 @@ swiper-slide {
   .rate__item {
     gap: calc(20px + 5 * ((100vw - 320px) / 1600));
   }
+  /* .hide {           
+     opacity: 1;
+     @include adaptiv-value("height", 250, 150, 0);
+
+   }*/
   .slider table .index-big {
     font-size: calc(12px + 16 * ((100vw - 320px) / 1600));
   }
   .slider__item1 {
     padding: calc(10px + 10 * ((100vw - 320px) / 1600));
-    row-gap: 1rem;
-    -webkit-column-gap: calc(10px + 10 * ((100vw - 320px) / 1600));
-       -moz-column-gap: calc(10px + 10 * ((100vw - 320px) / 1600));
-            column-gap: calc(10px + 10 * ((100vw - 320px) / 1600));
+    row-gap: 0.5rem;
+    -webkit-column-gap: calc(0px + 20 * ((100vw - 320px) / 1600));
+       -moz-column-gap: calc(0px + 20 * ((100vw - 320px) / 1600));
+            column-gap: calc(0px + 20 * ((100vw - 320px) / 1600));
+    grid-template-rows: [row1-s] minmax(100px, 113px) [row2-s] minmax(150px, auto) [row3-s] minmax(150px, 1fr);
   }
   .slider__title {
     font-size: calc(15px + 15 * ((100vw - 320px) / 1600));
