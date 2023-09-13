@@ -1,0 +1,54 @@
+
+@import 'libs/font';
+// @import 'libs/slick';
+// @import 'libs/animate';
+// @import 'libs/owl.carousel.min';
+// @import 'libs/owl.theme.default.min';
+@import 'base/mixins';
+@import 'base/veriable';
+@import 'base/normalize'; 
+@import 'base/buttons';
+// @import 'base/form';
+// @import 'blocks/advantage';
+// @import 'blocks/forms';
+// @import 'blocks/consultation';
+// @import 'blocks/carousel';
+// @import 'blocks/catalog';
+// @import 'blocks/reviews';
+// @import 'blocks/footer';
+@import 'blocks/header';
+@import 'blocks/main';
+// @import 'base/menu';
+// @import 'base/title';
+// @import 'base/descr';
+// @import 'blocks/news';
+// @import 'blocks/forum';
+// @import 'blocks/footer';
+@import 'base/media';
+
+a:hover{
+    color: $main-color;
+    transition: 0.5s;
+  }
+img{
+    width: 100%;
+
+}
+body{
+    font-family: $fonts-reg
+}
+* {
+    font-display: swap;
+    margin: 0;  
+}
+.container {
+   max-width: 1720px;
+   margin: 0 auto;
+   padding: 0 15px;
+
+}
+
+.section{
+     @include adaptiv-value("padding-top", 60, 30, 0);
+     @include adaptiv-value("padding-bottom", 60, 30, 0);
+}

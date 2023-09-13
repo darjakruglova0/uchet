@@ -1,0 +1,66 @@
+.btn-online{
+  width: 200px;
+}
+.btn {
+
+      background: #fff;
+      color:#000;
+      cursor: pointer;
+      @include adaptiv-value("border-radius", 32, 20, 0);
+   
+      padding-top: 15px;
+      padding-bottom: 15px;
+      @include adaptiv-value("padding-left", 70, 5, 0);
+      @include adaptiv-value("padding-right", 70, 5, 0);
+     svg{
+      vertical-align: middle;
+      @include adaptiv-value("width", 14, 10, 0);
+     }
+      @include adaptiv-value("font-size", 20, 13, 0);
+      font-weight: 600;
+      span{
+      
+        @include adaptiv-value("margin-right", 15, 5, 0);
+      }
+}
+
+
+.btn-green{
+  //border-radius: 32px;
+background: #379C60;
+color: #fff;
+font-weight: 400;
+@include adaptiv-value("font-size", 25, 13, 0);
+padding: 21px 30px;
+border: none;
+transition: 0.5s;
+}
+
+.btn-rate{
+  box-sizing: border-box;
+  @include adaptiv-value("max-width", 446, 300, 0);
+  text-align: center;
+  transition: 0.5s;
+}
+.btn-rate:hover {
+background: $bacground-gray;
+color: $main-color;
+}
+.btn-present:hover {
+  background: $bacground-gray;
+  color: $main-color;
+  }
+
+.btn-rate-white:hover {
+  background: $text-color-white;
+  color: $main-color;
+}
+.btn-white {
+  @include adaptiv-value("border-radius", 32, 20, 0);
+background: $text-color-white;
+color: $main-color;
+font-family: $fonts-semibold;
+@include adaptiv-value("font-size", 25, 13, 0);
+padding: 21px 30px;
+transition: 0.5s;
+}

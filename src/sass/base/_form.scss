@@ -1,0 +1,38 @@
+.feed__form {
+    width: 58rem;
+    position: relative;
+    input {
+        padding: 0 ;
+        padding-left: 6rem;
+        padding-right: 27rem;
+        border: none;
+        width: 100%;
+        height: 8rem;
+        background: #F3F3F3;
+        border-radius: 40px;
+        font-weight: 500;
+        font-size: 2.5rem;
+        line-height: 130%;
+        &::placeholder {
+            color: rgba(201, 201, 201, 0.7);
+          }
+        &:focus-visible{
+            outline: none;
+        }
+    }
+    &-btn {
+        padding: .1rem 5.3rem;
+        border: none;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: -33rem;
+        background: #686DE0;
+        border-radius: 40px;
+        font-weight: 700;
+        font-size: 2.5rem;
+        line-height: 2.9rem;
+        color: $main-color;
+        cursor: pointer;
+    }
+}

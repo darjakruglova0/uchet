@@ -1,0 +1,29 @@
+.footer {
+    padding: 3rem 0 6rem 0;
+    &__text {
+        margin-bottom: 2.7rem;
+        max-width: 73.7rem;
+        font-weight: 500;
+        font-size: 2.5rem;
+        line-height: 130%;
+        color: #FFFFFF;
+        span {
+            text-decoration: underline;
+        }
+    }
+    &__form {
+        margin-bottom: 2rem;
+    }
+    &__descr {
+        margin-bottom: 8rem;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 130%;
+        color: #5B5B5B;
+        a {
+        color: #686DE0;
+        }
+    }
+
+    
+}
